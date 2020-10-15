@@ -12,9 +12,30 @@ class Web extends Controller
         parent::__construct($router);
     }
 
-    public function login(?array $data)
+    public function login(?array $data): void
     {
-    	echo "<h1>Olá, mundo.</h1>";
+    	echo $this->view->render("login", [
+    		"title" => "Página incial"]);
+
     }
+
+    public function register(?array $data): void
+    {
+    	echo $this->view->render("register", [
+    		"title" => "Register"]);
+    }
+
+    public function forget(?array $data)
+    {
+    	echo $this->view->render("forget", [
+    		"title" => "Forget"]);
+    }
+
+    public function reset(?array $data)
+    {
+    	echo $this->view->render("reset", [
+    		"title" => "Reset"]);
+    }
+    
 }
 
