@@ -28,7 +28,7 @@ $router->post("/reset", "Auth:reset", "auth.reset");
 //Rota logada
 $router->group("/me");
 $router->get("/", "Profile:home", "profile.home");
-$router->get("/logout", "Profile:logou", "profile.logout");
+$router->get("/logout", "Profile:logout", "profile.logout");
 
 
 

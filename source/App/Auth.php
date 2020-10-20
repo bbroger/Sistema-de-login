@@ -21,7 +21,7 @@ class Auth extends Controller
 		$user = (new User())->find("email = :email", "email={$email}")->fetch();
 
 		if (!$user || !password_verify($passwd, $user->passwd)) {
-			echo 'Dados inválidos, tente novamente.';	
+			echo 'Dados inválidos, tente novamente.';				
 			$this->router->redirect("web.login");
 			return;
 		}
@@ -33,9 +33,7 @@ class Auth extends Controller
 
 	public function register(?array $data): void
 	{
-		$data = filter_var_array($data, FILTER_SANITIZE_STRIPPED);
-
-		
+		$data = filter_var_array($data, FILTER_SANITIZE_STRIPPED);		
 
 		$user = new User();
 		$user->first_name = $data['first_name'];
@@ -47,7 +45,7 @@ class Auth extends Controller
 			echo $user->fail->getMessage();
 			return;
 		}
-
+ 
 		$_SESSION['user'] = $user->id;
 		$this->router->redirect("profile.home");
 	}

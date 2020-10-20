@@ -13,7 +13,7 @@ class Profile extends Controller
         parent::__construct($router);
     }
 
-    public function home()
+    public function home(): void
     {
     	if (empty(($_SESSION['user'])) || !$user = (new User())->find("id = :id", "id={$_SESSION['user']}")) {
             unset($_SESSION['user']);
@@ -29,7 +29,7 @@ class Profile extends Controller
 
     public function logout(): void  
     {
-        //unset($_SESSION['user']);
-        //this->router->redirect("web.login");
+        unset($_SESSION['user']);
+        $this->router->redirect("web.login");
     }
 }

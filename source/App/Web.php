@@ -14,6 +14,10 @@ class Web extends Controller
 
     public function login(?array $data): void
     {
+    	if (!empty($_SESSION['user']) || isset($_SESSION['user'])) {
+    		$this->router->redirect("profile.home");
+    		return;
+    	}
     	echo $this->view->render("login", [
     		"title" => "Página incial"]);
 
