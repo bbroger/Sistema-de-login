@@ -1,13 +1,14 @@
 <?php $v->layout("_theme.php"); ?>
 
 
-
-<div class="container">
+<div class="container justify-content-center home-page">	
 	<div class="title">
-		<h1>Página logada</h1>
+		<h3>Página do usuário.</h3>
+		<p>Seja bem-vindo(a), <?= $user->first_name; ?>.</p>
+		<p>Por enquanto a única coisa que você pode fazer é deslogar, rs. ;)</p>			
+		<a href="<?= $router->route("profile.logout"); ?>"><button id="btn-logout" class="btn btn-outline-primary btn-login btn-log">Logout</button></a>
 	</div>
-	<div class="content">
-		<p>Seja bem-vindo(a) <?= $user->first_name; ?></p>
-	</div>
-	<a href="<?= $router->route("profile.logout"); ?>">Sair</a>
+
 </div>
+
+

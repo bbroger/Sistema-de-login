@@ -2,11 +2,12 @@
 
 namespace Source\App;
 use Source\Core\Controller;
+use laracasts\flash;
 
 
 class Web extends Controller		
 {
-    
+
     public function __construct($router)
     {
         parent::__construct($router);
@@ -14,32 +15,16 @@ class Web extends Controller
 
     public function login(?array $data): void
     {
+        $msg = new \Plasticbrain\FlashMessages\FlashMessages();
     	if (!empty($_SESSION['user']) || isset($_SESSION['user'])) {
+            $msg->error("Para acessar a página de login, aperte para sair.");
     		$this->router->redirect("profile.home");
     		return;
     	}
     	echo $this->view->render("login", [
-    		"title" => "Página incial"]);
-
-    }
-
-    public function register(?array $data): void
-    {
-    	echo $this->view->render("register", [
-    		"title" => "Register"]);
-    }
-
-    public function forget(?array $data)
-    {
-    	echo $this->view->render("forget", [
-    		"title" => "Forget"]);
-    }
-
-    public function reset(?array $data)
-    {
-    	echo $this->view->render("reset", [
-    		"title" => "Reset"]);
-    }
-    
+    		"title" => "Página incial", 
+            "msg" => $msg->display()]);
+        
+    }    
 }
 

@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "8661f788c27a5e0d820c06b91cf04903",
+    "content-hash": "216b42ed2384e897188168df79fbeb65",
     "packages": [
         {
             "name": "coffeecode/datalayer",
@@ -173,73 +173,46 @@
             "time": "2018-01-31T07:20:23+00:00"
         },
         {
-            "name": "phpmailer/phpmailer",
-            "version": "v6.1.8",
+            "name": "plasticbrain/php-flash-messages",
+            "version": "v1.0.1",
             "source": {
                 "type": "git",
-                "url": "https://github.com/PHPMailer/PHPMailer.git",
-                "reference": "917ab212fa00dc6eacbb26e8bc387ebe40993bc1"
+                "url": "https://github.com/plasticbrain/PhpFlashMessages.git",
+                "reference": "b565762619342057ce561de20d0f2f6e14f9aa77"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/PHPMailer/PHPMailer/zipball/917ab212fa00dc6eacbb26e8bc387ebe40993bc1",
-                "reference": "917ab212fa00dc6eacbb26e8bc387ebe40993bc1",
+                "url": "https://api.github.com/repos/plasticbrain/PhpFlashMessages/zipball/b565762619342057ce561de20d0f2f6e14f9aa77",
+                "reference": "b565762619342057ce561de20d0f2f6e14f9aa77",
                 "shasum": ""
             },
             "require": {
-                "ext-ctype": "*",
-                "ext-filter": "*",
-                "ext-hash": "*",
-                "php": ">=5.5.0"
-            },
-            "require-dev": {
-                "doctrine/annotations": "^1.2",
-                "friendsofphp/php-cs-fixer": "^2.2",
-                "phpunit/phpunit": "^4.8 || ^5.7"
-            },
-            "suggest": {
-                "ext-mbstring": "Needed to send email in multibyte encoding charset",
-                "hayageek/oauth2-yahoo": "Needed for Yahoo XOAUTH2 authentication",
-                "league/oauth2-google": "Needed for Google XOAUTH2 authentication",
-                "psr/log": "For optional PSR-3 debug logging",
-                "stevenmaguire/oauth2-microsoft": "Needed for Microsoft XOAUTH2 authentication",
-                "symfony/polyfill-mbstring": "To support UTF-8 if the Mbstring PHP extension is not enabled (^1.2)"
+                "php": ">=5.4.0"
             },
             "type": "library",
             "autoload": {
                 "psr-4": {
-                    "PHPMailer\\PHPMailer\\": "src/"
+                    "Plasticbrain\\FlashMessages\\": "src/"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
-                "LGPL-2.1-only"
+                "MIT"
             ],
             "authors": [
                 {
-                    "name": "Marcus Bointon",
-                    "email": "phpmailer@synchromedia.co.uk"
-                },
-                {
-                    "name": "Jim Jagielski",
-                    "email": "jimjag@gmail.com"
-                },
-                {
-                    "name": "Andy Prevost",
-                    "email": "codeworxtech@users.sourceforge.net"
-                },
-                {
-                    "name": "Brent R. Matzelle"
+                    "name": "Mike Everhart",
+                    "email": "mike@plasticbrain.net"
                 }
             ],
-            "description": "PHPMailer is a full-featured email creation and transfer class for PHP",
-            "funding": [
-                {
-                    "url": "https://github.com/synchro",
-                    "type": "github"
-                }
+            "description": "A modern take on PHP session-based flash messages",
+            "keywords": [
+                "bootstrap",
+                "flash",
+                "messages",
+                "session"
             ],
-            "time": "2020-10-09T14:55:58+00:00"
+            "time": "2016-04-01T08:39:38+00:00"
         }
     ],
     "packages-dev": [],
